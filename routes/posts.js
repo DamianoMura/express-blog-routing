@@ -11,6 +11,21 @@ router.get('/',(req,res)=>{
 
 // show id 
 router.get('/:id',(req,res)=>{
-  res.send(`item id ${req.params.id}`);
+  res.send(`post id ${req.params.id}`);
+})
+
+// insert new  id 
+router.post('/',(req,res)=>{
+  res.send(`create new post`);
+})
+
+// update post  id 
+router.put('/',(req,res)=>{
+  res.send(`update post ${req.params.id}`);
+})
+
+// modify post  id 
+router.patch('/',(req,res)=>{
+  res.send(`modify post ${req.params.id}`);
 })
 
