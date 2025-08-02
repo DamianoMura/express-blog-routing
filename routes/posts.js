@@ -20,12 +20,17 @@ router.post('/',(req,res)=>{
 })
 
 // update post  id 
-router.put('/',(req,res)=>{
+router.put('/:id',(req,res)=>{
   res.send(`update post ${req.params.id}`);
 })
 
 // modify post  id 
-router.patch('/',(req,res)=>{
+router.patch('/:id',(req,res)=>{
   res.send(`modify post ${req.params.id}`);
+})
+
+// delete post  id 
+router.delete('/id',(req,res)=>{
+  res.send(`delete post ${req.params.id}`);
 })
 
