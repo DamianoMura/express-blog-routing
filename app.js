@@ -17,7 +17,7 @@ app.get('/bacheca',(req,res)=>{
   //req.query allows us to get parameters sent by string query in the browser
   const param = req.query;
   //importing array of posts
-  const data = require("./data.js");
+  const data = require("./posts.js");
   //lets test if that worked
   console.log(data);
   // res.json(data);
