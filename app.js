@@ -8,19 +8,20 @@ const app = express();
 const port = 3000;
 //lets enable static  assets
 app.use(express.static('public'));
+//importing array of posts
+  const data = require("./posts.js");
 //creating the endpoint
+
 app.get('/',(req,res)=>{
   res.send('welcome to my blog');
 })
 //creating the endpoint bacheca to show our posts
 app.get('/bacheca',(req,res)=>{
-  //req.query allows us to get parameters sent by string query in the browser
-  const param = req.query;
-  //importing array of posts
-  const data = require("./posts.js");
+ 
+  
   //lets test if that worked
   console.log(data);
-  // res.json(data);
+  res.json(data);
   // console.log(param)
   // console.log(req.route)
   console.log(app)
