@@ -14,12 +14,17 @@ router.get('/',(req,res)=>{
 
 // show id 
 router.get('/:id',(req,res)=>{
-  res.send(`post id ${req.params.id}`);
+  // res.send(`post id ${req.params.id}`);
+  console.log(`we are showing post id:${req.params.id}`) //debug
+  //define variable post in wich we will put our filter result
+  const post = data.filter(obj => obj.id===parseInt(req.params.id))
+  res.send(post)
 })
 
 // insert new  id 
 router.post('/',(req,res)=>{
   res.send(`create new post`);
+ 
 })
 
 // update post  id 
