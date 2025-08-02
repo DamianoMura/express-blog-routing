@@ -34,3 +34,5 @@ router.delete('/id',(req,res)=>{
   res.send(`delete post ${req.params.id}`);
 })
 
+
+module.exports=router;
