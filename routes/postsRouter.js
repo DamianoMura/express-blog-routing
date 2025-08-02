@@ -1,12 +1,15 @@
 // import express
 const express = require('express');
 const router = express.Router();
-
+//we go and get the posts from /posts.js and import it here in /routes/posts.js
+//importing array of posts
+  const data = require("../posts.js");
 // define all routes
 //index for posts
 
 router.get('/',(req,res)=>{
-  res.send('index');
+  //here we show all posts
+  res.send(data);
 })
 
 // show id 

@@ -8,8 +8,7 @@ const app = express();
 const port = 3000;
 //lets enable static  assets
 app.use(express.static('public'));
-//importing array of posts
-  const data = require("./posts.js");
+
 //creating the endpoint
 
 app.get('/',(req,res)=>{
@@ -28,7 +27,7 @@ app.get('/',(req,res)=>{
 // })  
 //i commented it because we now have a route called posts so we will show them from there and we now import it
 
-const postsRoute = require('./routes/posts.js');
+const postsRoute = require('./routes/postsRouter.js');
 
 app.use('/posts', postsRoute);
 
